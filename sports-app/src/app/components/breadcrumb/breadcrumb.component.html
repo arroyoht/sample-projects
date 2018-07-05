@@ -1,36 +1,38 @@
 <div class="breadcrumb-container section">
-  <div class="breadcrumb-trail" >
-    <ng-template ngFor let-breadcrumb [ngForOf]="breadcrumbs" let-i="index">
-      <!--Trail start -->
-      <ng-template [ngIf]="i == 0">
-        <div class="breadcrumb-element" [ngClass]="{'current': isCurrent(i)}">
-          <a><fa-icon [icon]="homeIcon"></fa-icon></a>
-        </div>
+  <div class="section-row">
+    <div class="breadcrumb-trail" >
+      <ng-template ngFor let-breadcrumb [ngForOf]="breadcrumbs" let-i="index">
+        <!--Trail start -->
+        <ng-template [ngIf]="i == 0">
+          <div class="breadcrumb-element" [ngClass]="{'current': isCurrent(i)}">
+            <a><fa-icon [icon]="homeIcon"></fa-icon></a>
+          </div>
+        </ng-template>
+        <!--Trail body -->
+        <ng-template [ngIf]="i > 0 && !isCurrent(i)">
+          <div class="breadcrumb-element" [hidden]="isHidden(i)">
+            <fa-icon [icon]="arrowIcon"></fa-icon>
+          </div>
+          <div class="breadcrumb-element" [hidden]="isHidden(i)">
+            <a>{{breadcrumb}}</a>
+          </div>
+        </ng-template>
       </ng-template>
-      <!--Trail body -->
-      <ng-template [ngIf]="i > 0 && !isCurrent(i)">
-        <div class="breadcrumb-element" [hidden]="isHidden(i)">
-          <fa-icon [icon]="arrowIcon"></fa-icon>
-        </div>
-        <div class="breadcrumb-element" [hidden]="isHidden(i)">
-          <a>{{breadcrumb}}</a>
-        </div>
-      </ng-template>
-    </ng-template>
-    <ng-template [ngIf]="hasHidden()">
+      <ng-template [ngIf]="hasHidden()">
+          <div class="breadcrumb-element">
+            <fa-icon [icon]="arrowIcon"></fa-icon>
+          </div>
+          <div class="breadcrumb-element">
+            <a>...</a>
+          </div>
+        </ng-template>
+        <!-- Trail head -->
         <div class="breadcrumb-element">
           <fa-icon [icon]="arrowIcon"></fa-icon>
         </div>
-        <div class="breadcrumb-element">
-          <a>...</a>
+        <div class="breadcrumb-element current">
+          {{getCurrentPage()}}
         </div>
-      </ng-template>
-      <!-- Trail head -->
-      <div class="breadcrumb-element">
-        <fa-icon [icon]="arrowIcon"></fa-icon>
-      </div>
-      <div class="breadcrumb-element current">
-        {{getCurrentPage()}}
-      </div>
+    </div>
   </div>
 </div>

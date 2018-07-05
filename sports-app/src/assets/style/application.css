@@ -1,4 +1,6 @@
 
+/* General definitions */
+
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
@@ -17,7 +19,18 @@ a:hover {
 
 .container .section{
     padding: 1% 3%;
+}
+
+.container .section .section-row{
     display: flex;
+}
+
+.icon{
+    color: #1abc9c;
+}
+
+.icon.lg{
+    font-size: 4em;
 }
 
 /* TOP BAR TITLE */
@@ -79,4 +92,30 @@ a:hover {
 
 .breadcrumb-container .breadcrumb-trail .breadcrumb-element {
     padding: 0px 5px 0px 5px;
+}
+
+/* Panel style definitions */
+
+.panel-container {
+    background-color: #baebe1;
+}
+.panel-container .panel-item{
+    display: flex;
+    margin: 20px 80px 20px 0px;
+}
+
+.panel-container .panel-item .details{
+    margin: auto;
+    margin-left: 20px;
+}
+
+.panel-container .subtitle {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.panel-container .title {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #333333;
 }

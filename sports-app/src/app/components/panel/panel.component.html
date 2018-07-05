@@ -1,0 +1,17 @@
+<div class="panel-container section">
+  <div class="section-row">
+    <div class="panel-item" *ngFor="let item of panelItens">
+      <div class="icon lg">
+        <fa-icon [icon]="item.icon"></fa-icon>
+      </div>
+      <div class="details">
+        <div class="subtitle">
+          {{item.subtitle}}
+        </div>
+        <div class="title">
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

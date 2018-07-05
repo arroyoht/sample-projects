@@ -6,13 +6,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TopMenuComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
