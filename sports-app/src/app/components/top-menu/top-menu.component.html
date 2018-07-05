@@ -1,0 +1,14 @@
+<div class="top-menu-container" (click)="toggleMenu()">
+  <div class="menu-badge">
+    {{getUserBadge()}}
+  </div>
+  <div class="menu-title">
+    {{user.name}}
+  </div>
+  <div class="toggle-icon">
+      <fa-icon *ngIf="!isMenuOpen" [icon]="arrowDownIcon"></fa-icon>
+      <fa-icon *ngIf="isMenuOpen" [icon]="arrowUpIcon"></fa-icon>
+  </div>
+</div>
+<div class="top-menu">
+</div>

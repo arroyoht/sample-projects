@@ -1,0 +1,82 @@
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #575962;
+}
+
+a {
+    color: #1abc9c;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container .section{
+    padding: 1% 3%;
+    display: flex;
+}
+
+/* TOP BAR TITLE */
+
+.title-container {
+    display: flex;
+    padding: 10px 0px 10px 0px; 
+}
+
+.title-container .icon {
+    padding: 10px;
+    font-size: 2em;
+    color: white;
+    background-color: #1abc9c;
+    border-radius: 10%;
+    margin: auto;
+}
+
+.title-container .title {
+    padding: 0px 20px 0px 20px;
+    margin: auto;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+/* TOP MENU STYLE */
+
+.header-container .top-menu {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.top-menu-container{
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+}
+
+.top-menu-container div{
+    margin: auto 5px auto 5px;
+}
+
+.top-menu-container .menu-badge{
+    padding: 8px;
+    border: solid 1px;
+    border-radius: 50%;
+}
+
+/* Breadcrumbe style */
+
+.breadcrumb-container {
+    background-color: #f9f9f9;
+}
+
+.breadcrumb-container .breadcrumb-trail {
+    display: flex;
+}
+
+.breadcrumb-container .breadcrumb-trail .breadcrumb-element {
+    padding: 0px 5px 0px 5px;
+}
