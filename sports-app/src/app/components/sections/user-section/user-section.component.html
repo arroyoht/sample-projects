@@ -1,5 +1,5 @@
 <div class="user-section-container section">
-  <app-section-title title="Users" searchable="true" (filter)="filter"></app-section-title>
+  <app-section-title title="Users" searchable="true" [(filter)]="filter"></app-section-title>
   <div class="table-container">
     <table class="data-table">
       <tbody>
@@ -15,7 +15,7 @@
           <td class="table-cell header">Photos</td>
           <td class="table-cell header action"></td>
         </tr>
-        <tr class="table-row" *ngFor="let user of users; let odd = odd;" [ngClass]="{'odd': odd}">
+        <tr class="table-row" *ngFor="let user of getFilteredUsers(); let odd = odd;" [ngClass]="{'odd': odd}">
           <td class="table-cell" >{{user.username}}</td>
           <td class="table-cell">{{user.name}}</td>
           <td class="table-cell"><a href="mailto:{{user.email}}">{{user.email}}</a></td>

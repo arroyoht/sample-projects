@@ -46,6 +46,9 @@ export class UserSectionComponent implements OnInit {
     if(user && user.id){
       this.users = this.users.filter(u => u.id != user.id);
     }
+    else if(!user.id && this.users.indexOf(user) >= 0){
+      this.users.splice(this.users.indexOf(user), 1);
+    }
   }
 
   /**
@@ -79,5 +82,26 @@ export class UserSectionComponent implements OnInit {
     }
     
     return days.join(", ");
+  }
+
+  /**
+   * Filters users given the text filter input
+   */
+  getFilteredUsers(){
+    if(this.filter && this.filter.length > 0){  
+        return this.users.filter(u => {
+            return !(u.name.indexOf(this.filter) < 0) ||
+                !(u.username.indexOf(this.filter) < 0) ||
+                !(u.email.indexOf(this.filter) < 0) ||
+                !(u.photos.toString().indexOf(this.filter) < 0) ||
+                !(u.albums.toString().indexOf(this.filter) < 0) ||
+                !(u.posts.toString().indexOf(this.filter) < 0) ||
+                !(u.rideInGroup.indexOf(this.filter) < 0) ||
+                (u.address && !(u.address.city.indexOf(this.filter) < 0)) ||
+                !(this.getDaysOfTheWeek(u.dayOfTheWeek).indexOf(this.filter) < 0);
+        });
+    }
+
+    return this.users;
   }
 }

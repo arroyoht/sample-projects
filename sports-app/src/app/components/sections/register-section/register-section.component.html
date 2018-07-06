@@ -23,36 +23,50 @@
     <div class="form-group">
       <div class="input-group">
         <label for="username">Username</label>
-        <input name="username" type="text" class="lg" />
+        <input name="username" type="text" [(ngModel)]="newUser.username" />
       </div>
       <div class="input-group">
         <label for="city">City</label>
-        <input name="city" type="text" class="lg" />
+        <input name="city" type="text" [(ngModel)]="newUser.address.city" />
       </div>
     </div>
     <div class="form-group">
       <div class="input-group">
         <label for="name">Name</label>
-        <input name="name" type="text" class="lg" />
+        <input name="name" type="text" [(ngModel)]="newUser.name" />
       </div>
       <div class="input-group">
         <label for="rideInGroup">Ride In Group?</label>
-        <input name="rideInGroup" type="text" class="lg" />
+        <div class="input-row">
+            <div class="input-cell" *ngFor="let option of rideInGroup">
+                <div class="radio-btn selectable" [ngClass]="{'selected': isRideOptionSelected(option)}" (click)="setRideInGroupOption(option)">
+                    <fa-icon class="selected-icon lg" [icon]="circleIcon"></fa-icon>
+                </div>
+                <div class="input-cell-label">{{option}}</div>
+            </div>
+        </div>
       </div>
     </div>
     <div class="form-group">
       <div class="input-group">
         <label for="email">E-mail</label>
-        <input name="email" type="text" class="lg" />
+        <input name="email" type="text" [(ngModel)]="newUser.email" />
       </div>
       <div class="input-group">
         <label for="daysOfTheWeek">Days of the Week</label>
-        <input name="daysOfTheWeek" type="text" class="lg" />
+        <div class="input-row">
+            <div class="input-cell" *ngFor="let day of daysOfTheWeek">
+                <div class="check-box selectable" [ngClass]="{'selected': isDaySelected(day)}" (click)="toggleDayOfTheWeek(day)">
+                    <fa-icon class="selected-icon" [icon]="checkIcon"></fa-icon>
+                </div>
+                <div class="input-cell-label">{{day}}</div>
+            </div>
+        </div>
       </div>
     </div>
     <div class="form-group">
-      <button class="btn btn-success" type="input">Save</button>
-      <button class="btn btn-secondary "type="input">Discard</button>
+      <button class="btn btn-success" [disabled]="!isFormValid()" (click)="createUser()" type="input">Save</button>
+      <button class="btn btn-secondary "type="input" (click)="resetUser()">Discard</button>
     </div>
   </div>
 </div>

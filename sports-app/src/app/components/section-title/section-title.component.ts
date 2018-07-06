@@ -18,6 +18,11 @@ export class SectionTitleComponent implements OnInit {
 
   searchIcon: IconDefinition = faSearch;
 
+  @Input()
+  get filter(){
+    return this.textFilter;
+  }
+   
   @Output()
   filterChange = new EventEmitter();
   set filter(val: string){
