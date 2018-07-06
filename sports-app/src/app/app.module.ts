@@ -11,6 +11,7 @@ import { PanelComponent } from './components/panel/panel.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
 import { UserSectionComponent } from './components/sections/user-section/user-section.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterSectionComponent } from './components/sections/register-section/register-section.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     BreadcrumbComponent,
     PanelComponent,
     SectionTitleComponent,
-    UserSectionComponent
+    UserSectionComponent,
+    RegisterSectionComponent
   ],
   imports: [
     BrowserModule,

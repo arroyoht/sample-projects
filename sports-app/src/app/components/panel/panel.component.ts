@@ -8,7 +8,7 @@ import { faTrophy, faPuzzlePiece, faMapSigns } from '@fortawesome/free-solid-svg
 })
 export class PanelComponent implements OnInit {
 
-  panelItens: any = [
+  panelItems: any = [
     { title: 'Cycling', subtitle: 'Sport Type', icon: faPuzzlePiece},
     { title: 'Advanced', subtitle: 'Mode', icon: faTrophy},
     { title: '30 miles', subtitle: 'Route', icon: faMapSigns},

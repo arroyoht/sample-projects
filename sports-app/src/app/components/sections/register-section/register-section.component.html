@@ -1,0 +1,25 @@
+<div class="register-section-container section">
+  <app-section-title title="Registration"></app-section-title>
+  <!-- Info Panel -->
+  <div class="info-panel-container section">
+    <div class="section-row">
+      <div class="info-panel-item" *ngFor="let item of panelItems">
+        <div class="title">
+          {{item.title}}
+        </div>
+        <div class="item-body">
+          <div class="icon lg">
+            <fa-icon [icon]="item.icon"></fa-icon>
+          </div>
+          <div class="subtitle">
+            {{item.content}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="form-container">
+    
+  </div>
+</div>

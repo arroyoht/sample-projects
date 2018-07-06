@@ -55,6 +55,7 @@ input:focus {
 .input-group{
     position: relative;
     margin: auto;
+    margin-left: 50px;
 }
 .input-group.icon .input-icon {
     position: absolute;
@@ -168,12 +169,13 @@ input:focus {
 .section-title-container .section-title {
     font-size: 3.3em;
     color: #333333;
+    margin-right: 50px;
 }
 
 .section-title-container .separator {
     width: 100%;
     background-color: #e3e3e3;
-    margin: auto 100px;
+    margin: auto;
     height: 3px;
 }
 
@@ -212,4 +214,28 @@ table.data-table .table-row:hover .table-cell.action .table-icon{
     display: block;
     color: #3ac5a9;
     cursor: pointer;
+}
+
+/* Register section */
+
+.info-panel-container .info-panel-item{
+    width: 33%;
+}
+.info-panel-container .title{
+    color: #1abc9c;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+.info-panel-container .item-body{
+    display: flex;
+}
+.info-panel-container .item-body .icon{
+    margin: auto;
+    color: #1abc9c;
+}
+
+.info-panel-container .item-body .subtitle{
+    margin: auto;
+    padding: 20px;
+    font-size: 1.2em;
 }
