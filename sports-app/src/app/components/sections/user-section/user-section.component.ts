@@ -53,6 +53,10 @@ export class UserSectionComponent implements OnInit {
    * @param address user address
    */
   getCityAddressLink(address: Address){
+    if(!address || !address.geo){
+      return "";
+    }
+    
     return `https://www.google.com/maps/?q=${address.geo.lat},${address.geo.lng}`;
   }
 
@@ -61,7 +65,10 @@ export class UserSectionComponent implements OnInit {
    * @param days user days of the week list
    */
   getDaysOfTheWeek(days: string[]){
-    if(days.length == 2 && days.indexOf(daysOfWeek[daysOfWeek.length - 1]) >= 0 && days.indexOf(daysOfWeek[daysOfWeek.length - 2]) >= 0){
+    if(!days || days.length == 0){
+      return " - ";
+    }
+    else if(days.length == 2 && days.indexOf(daysOfWeek[daysOfWeek.length - 1]) >= 0 && days.indexOf(daysOfWeek[daysOfWeek.length - 2]) >= 0){
       return "Weekends";
     }
     else if(days.length == 5 && days.indexOf(daysOfWeek[daysOfWeek.length - 1]) < 0 && days.indexOf(daysOfWeek[daysOfWeek.length - 2]) < 0){
