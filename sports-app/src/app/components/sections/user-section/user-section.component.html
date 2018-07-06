@@ -1,0 +1,35 @@
+<div class="user-section-container section">
+  <app-section-title title="Users" searchable="true" (filter)="filter"></app-section-title>
+  <div class="table-container">
+    <table class="data-table">
+      <tbody>
+        <tr class="table-row header-row">
+          <td class="table-cell header">Username</td>
+          <td class="table-cell header">Name</td>
+          <td class="table-cell header">E-mail</td>
+          <td class="table-cell header">City</td>
+          <td class="table-cell header">Ride in Group</td>
+          <td class="table-cell header">Day of the Week</td>
+          <td class="table-cell header">Posts</td>
+          <td class="table-cell header">Albuns</td>
+          <td class="table-cell header">Photos</td>
+          <td class="table-cell header action"></td>
+        </tr>
+        <tr class="table-row" *ngFor="let user of users; let odd = odd;" [ngClass]="{'odd': odd}">
+          <td class="table-cell" >{{user.username}}</td>
+          <td class="table-cell">{{user.name}}</td>
+          <td class="table-cell"><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+          <td class="table-cell"><a>{{user.address.city}}</a></td>
+          <td class="table-cell">{{user.rideInGroup}}</td>
+          <td class="table-cell">{{user.dayOfTheWeek}}</td>
+          <td class="table-cell"><a>{{user.posts}}</a></td>
+          <td class="table-cell"><a>{{user.albuns}}</a></td>
+          <td class="table-cell">{{user.photos}}</td>
+          <td class="table-cell action">
+            <fa-icon class="table-icon" [icon]="trashIcon" (click)="removeUser(user)"></fa-icon>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

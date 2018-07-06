@@ -1,0 +1,8 @@
+<div class="section-title-container">
+  <div class="section-title">{{title}}</div>
+  <div class="separator"></div>
+  <div class="input-group icon">
+    <input class="icon" type="text" *ngIf="searchable" placeholder="Filter table content" [(ngModel)]="filter">
+    <fa-icon class="input-icon" [icon]="searchIcon"></fa-icon>
+  </div>
+</div>

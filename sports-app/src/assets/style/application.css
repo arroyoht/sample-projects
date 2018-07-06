@@ -9,7 +9,7 @@ body {
 }
 
 a {
-    color: #1abc9c;
+    color: #3ac5a9;
 }
 
 a:hover {
@@ -25,12 +25,52 @@ a:hover {
     display: flex;
 }
 
-.icon{
-    color: #1abc9c;
-}
-
 .icon.lg{
     font-size: 4em;
+}
+
+/* Inputs */
+
+input {
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #e3e3e3e3;
+    color: #575962;
+    font-size: 1.2em;
+    outline: none;
+    width: 400px;
+}
+input.icon {
+    padding: 10px 10px 10px 40px;
+}
+input.lg {
+    width: 600px;
+}
+input:focus {
+    border-radius: 10px;
+    border-color: #1abc9c;
+}
+.input-group{
+    position: relative;
+    margin: auto;
+}
+.input-group.icon .input-icon {
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    color: #e3e3e3e3;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e3e3e3e3;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #e3e3e3e3;
 }
 
 /* TOP BAR TITLE */
@@ -86,10 +126,6 @@ a:hover {
     background-color: #f9f9f9;
 }
 
-.breadcrumb-container .breadcrumb-trail {
-    display: flex;
-}
-
 .breadcrumb-container .breadcrumb-trail .breadcrumb-element {
     padding: 0px 5px 0px 5px;
 }
@@ -108,7 +144,9 @@ a:hover {
     margin: auto;
     margin-left: 20px;
 }
-
+.panel-container .panel-item .icon{
+    color: #1abc9c;
+}
 .panel-container .subtitle {
     font-weight: bold;
     font-size: 1.1em;
@@ -118,4 +156,59 @@ a:hover {
     font-weight: bold;
     font-size: 1.8em;
     color: #333333;
+}
+
+/* Sections */
+
+.section-title-container {
+    display: flex;
+    margin: 50px 0px;
+}
+
+.section-title-container .section-title {
+    font-size: 3.3em;
+    color: #333333;
+}
+
+.section-title-container .separator {
+    width: 100%;
+    background-color: #e3e3e3;
+    margin: auto 100px;
+    height: 3px;
+}
+
+/* User table style */
+table.data-table {
+    width: 100%;
+    border-spacing: 0px;
+}
+
+table.data-table .table-row.header-row:hover{
+    background-color: white;
+}
+table.data-table .table-row.header-row .table-cell{
+    color: #333333;
+    border-bottom: 1px solid black;
+}
+table.data-table .table-row .table-cell{
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+}
+table.data-table .table-row.odd{
+    background-color: #f9f9f9;
+}
+table.data-table .table-row:hover{
+    background-color: #e3e3e3e3;
+}
+table.data-table .table-row .table-cell.action{
+    min-width: 10px;
+}
+table.data-table .table-row .table-cell.action .table-icon{
+    display: none;
+}
+table.data-table .table-row:hover .table-cell.action .table-icon{
+    display: block;
+    color: #3ac5a9;
+    cursor: pointer;
 }
