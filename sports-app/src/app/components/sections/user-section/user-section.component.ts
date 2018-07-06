@@ -97,7 +97,7 @@ export class UserSectionComponent implements OnInit {
                 !(u.albums.toString().indexOf(this.filter) < 0) ||
                 !(u.posts.toString().indexOf(this.filter) < 0) ||
                 !(u.rideInGroup.indexOf(this.filter) < 0) ||
-                (u.address && !(u.address.city.indexOf(this.filter) < 0)) ||
+                (u.address && u.address.city && !(u.address.city.indexOf(this.filter) < 0)) ||
                 !(this.getDaysOfTheWeek(u.dayOfTheWeek).indexOf(this.filter) < 0);
         });
     }
