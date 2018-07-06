@@ -202,7 +202,7 @@ table.data-table .table-row:hover{
     background-color: #e3e3e3e3;
 }
 table.data-table .table-row .table-cell.action{
-    min-width: 10px;
+    min-width: 20px;
 }
 table.data-table .table-row .table-cell.action .table-icon{
     display: none;

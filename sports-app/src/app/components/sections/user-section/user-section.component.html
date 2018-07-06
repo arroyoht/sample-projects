@@ -19,7 +19,7 @@
           <td class="table-cell" >{{user.username}}</td>
           <td class="table-cell">{{user.name}}</td>
           <td class="table-cell"><a href="mailto:{{user.email}}">{{user.email}}</a></td>
-          <td class="table-cell"><a>{{user.address.city}}</a></td>
+          <td class="table-cell"><a href="{{getCityAddressLink(user.address)}}">{{user.address.city}}</a></td>
           <td class="table-cell">{{user.rideInGroup}}</td>
           <td class="table-cell">{{user.dayOfTheWeek}}</td>
           <td class="table-cell"><a>{{user.posts}}</a></td>
