@@ -7,8 +7,8 @@ export class User {
     email: string;
     address: Address;
     rideInGroup: string;
-    dayOfTheWeek: string;
+    dayOfTheWeek: string[];
     posts: number;
-    albuns: number;
+    albums: number;
     photos: number;
 }

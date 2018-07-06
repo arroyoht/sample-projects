@@ -11,7 +11,7 @@
           <td class="table-cell header">Ride in Group</td>
           <td class="table-cell header">Day of the Week</td>
           <td class="table-cell header">Posts</td>
-          <td class="table-cell header">Albuns</td>
+          <td class="table-cell header">Albums</td>
           <td class="table-cell header">Photos</td>
           <td class="table-cell header action"></td>
         </tr>
@@ -21,9 +21,9 @@
           <td class="table-cell"><a href="mailto:{{user.email}}">{{user.email}}</a></td>
           <td class="table-cell"><a href="{{getCityAddressLink(user.address)}}">{{user.address.city}}</a></td>
           <td class="table-cell">{{user.rideInGroup}}</td>
-          <td class="table-cell">{{user.dayOfTheWeek}}</td>
+          <td class="table-cell">{{getDaysOfTheWeek(user.dayOfTheWeek)}}</td>
           <td class="table-cell"><a>{{user.posts}}</a></td>
-          <td class="table-cell"><a>{{user.albuns}}</a></td>
+          <td class="table-cell"><a>{{user.albums}}</a></td>
           <td class="table-cell">{{user.photos}}</td>
           <td class="table-cell action">
             <fa-icon class="table-icon" [icon]="trashIcon" (click)="removeUser(user)"></fa-icon>
