@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { faTrophy, faPuzzlePiece, faMapSigns } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faTrophy, faPuzzlePiece, faMapSigns } from '@fortawesome/free-solid-svg
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.css']
 })
-export class PanelComponent implements OnInit {
+export class PanelComponent {
 
   panelItems: any = [
     { title: 'Cycling', subtitle: 'Sport Type', icon: faPuzzlePiece},
@@ -15,8 +15,4 @@ export class PanelComponent implements OnInit {
   ]
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

@@ -1,17 +1,14 @@
 
 /* General definitions */
-
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #575962;
 }
-
 a {
     color: #3ac5a9;
 }
-
 a:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -20,7 +17,6 @@ a:hover {
 .container .section{
     padding: 1% 3%;
 }
-
 .container .section .section-row{
     display: flex;
 }
@@ -90,8 +86,6 @@ input:focus {
 .input-group input:focus~.helper-label{
     display: block;
 }
-
-
 
 .form-container{
     margin: 0% 10%;
@@ -212,17 +206,14 @@ div.selectable.selected .selected-icon.lg{
     display: flex;
     position: relative;
 }
-
 .top-menu-container div{
     margin: auto 5px auto 5px;
 }
-
 .top-menu-container .menu-badge{
     padding: 8px;
     border: solid 1px;
     border-radius: 50%;
 }
-
 .top-menu-container .top-menu{
     position: absolute;
     background-color: white;
@@ -262,7 +253,6 @@ div.selectable.selected .selected-icon.lg{
 .breadcrumb-container {
     background-color: #f9f9f9;
 }
-
 .breadcrumb-container .breadcrumb-trail .breadcrumb-element {
     padding: 0px 5px 0px 5px;
 }
@@ -288,7 +278,6 @@ div.selectable.selected .selected-icon.lg{
     font-weight: bold;
     font-size: 1.1em;
 }
-
 .panel-container .title {
     font-weight: bold;
     font-size: 1.8em;
@@ -301,7 +290,6 @@ div.selectable.selected .selected-icon.lg{
     display: flex;
     margin: 50px 0px;
 }
-
 .section-title-container .section-title {
     font-size: 3.3em;
     color: #333333;

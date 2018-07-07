@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { UserService } from '../../../services/user-service.service';
 import { User } from '../../../model/user.model';
 import { faTrashAlt, IconDefinition } from '@fortawesome/free-regular-svg-icons';
@@ -10,7 +10,7 @@ import { daysOfWeek } from '../../../app.constants';
   templateUrl: './user-section.component.html',
   styleUrls: ['./user-section.component.css']
 })
-export class UserSectionComponent implements OnInit {
+export class UserSectionComponent {
 
   filter: string;
 
@@ -32,9 +32,6 @@ export class UserSectionComponent implements OnInit {
 
   constructor() { 
     this.userList = [];
-  }
-
-  ngOnInit() {
   }
 
   /**

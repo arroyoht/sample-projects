@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { faSearch, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faSearch, IconDefinition } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './section-title.component.html',
   styleUrls: ['./section-title.component.css']
 })
-export class SectionTitleComponent implements OnInit {
+export class SectionTitleComponent {
 
   @Input()
   searchable: boolean;
@@ -33,8 +33,4 @@ export class SectionTitleComponent implements OnInit {
   constructor() {
     this.textFilter = "";
   }
-
-  ngOnInit() {
-  }
-
 }

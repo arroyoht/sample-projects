@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { faAngleDown, faAngleUp, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faAngleDown, faAngleUp, IconDefinition } from '@fortawesome/free-solid-
   templateUrl: './top-menu.component.html',
   styleUrls: ['./top-menu.component.css']
 })
-export class TopMenuComponent implements OnInit {
+export class TopMenuComponent {
 
   arrowDownIcon: IconDefinition; 
   arrowUpIcon: IconDefinition;
@@ -21,9 +21,6 @@ export class TopMenuComponent implements OnInit {
   constructor() { 
     this.arrowDownIcon = faAngleDown;
     this.arrowUpIcon = faAngleUp;
-  }
-
-  ngOnInit() {
   }
 
   getUserBadge(){

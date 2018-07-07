@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { faVolleyballBall, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,16 +6,11 @@ import { faVolleyballBall, IconDefinition } from '@fortawesome/free-solid-svg-ic
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   faVolleyballBall: IconDefinition;
 
   constructor() {
     this.faVolleyballBall = faVolleyballBall;
   }
-
-  ngOnInit() {
-    
-  }
-
 }
