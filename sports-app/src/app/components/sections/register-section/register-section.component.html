@@ -22,21 +22,23 @@
   <div class="form-container">
     <div class="form-group">
       <div class="input-group">
-        <label for="username">Username</label>
+        <div class="label">Username</div>
         <input name="username" type="text" [(ngModel)]="newUser.username" />
+        <div class="helper-label">Insert a username to be used to log in.</div>
       </div>
       <div class="input-group">
-        <label for="city">City</label>
+        <div class="label">City</div>
         <input name="city" type="text" [(ngModel)]="newUser.address.city" />
       </div>
     </div>
     <div class="form-group">
       <div class="input-group">
-        <label for="name">Name</label>
+        <div class="label">Name</div>
         <input name="name" type="text" [(ngModel)]="newUser.name" />
+        <div class="helper-label">How would you like us to address you?</div>
       </div>
       <div class="input-group">
-        <label for="rideInGroup">Ride In Group?</label>
+        <div class="label">Ride In Group?</div>
         <div class="input-row">
             <div class="input-cell" *ngFor="let option of rideInGroup">
                 <div class="radio-btn selectable" [ngClass]="{'selected': isRideOptionSelected(option)}" (click)="setRideInGroupOption(option)">
@@ -49,11 +51,12 @@
     </div>
     <div class="form-group">
       <div class="input-group">
-        <label for="email">E-mail</label>
+        <div class="label">E-mail</div>
         <input name="email" type="text" [(ngModel)]="newUser.email" />
+        <div class="helper-label">Insert a valid E-mail so we can contact you</div>
       </div>
       <div class="input-group">
-        <label for="daysOfTheWeek">Days of the Week</label>
+        <div class="label">Days of the Week</div>
         <div class="input-row">
             <div class="input-cell" *ngFor="let day of daysOfTheWeek">
                 <div class="check-box selectable" [ngClass]="{'selected': isDaySelected(day)}" (click)="toggleDayOfTheWeek(day)">

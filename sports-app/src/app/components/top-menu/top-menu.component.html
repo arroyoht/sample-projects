@@ -9,6 +9,11 @@
       <fa-icon *ngIf="!isMenuOpen" [icon]="arrowDownIcon"></fa-icon>
       <fa-icon *ngIf="isMenuOpen" [icon]="arrowUpIcon"></fa-icon>
   </div>
-</div>
-<div class="top-menu">
+  <div class="top-menu" [ngClass]="{'visible' : isMenuOpen}">
+    <div class="menu-item">Friends List</div>
+    <div class="menu-item">Saved Items</div>
+    <div class="menu-item">Notifications</div>
+    <div class="menu-item">User Preferences</div>
+    <div class="menu-item last">Logout</div>
+  </div>    
 </div>
