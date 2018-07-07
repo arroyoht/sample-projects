@@ -125,6 +125,7 @@ div.input-cell {
 }
 div.input-row{
     display: flex;
+    padding: 10px;
 }
 div.input-cell .input-cell-label{
     margin: auto 10px;
@@ -173,7 +174,6 @@ div.selectable.selected .selected-icon.lg{
 
 .title-container {
     display: flex;
-    padding: 10px 0px 10px 0px; 
 }
 
 .title-container .icon {
